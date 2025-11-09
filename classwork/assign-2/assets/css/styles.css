@@ -74,7 +74,7 @@ nav a:hover { color:  rgb(93, 4, 1); font-weight: bolder; }
 
 header {
 
-  background-image: url("/assets/images/grass-bg.jpg");
+  background-image: url("../../assets/images/grass-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -125,7 +125,7 @@ section {
 
 
 #how-it-works { 
-  background-image: url("/assets/images/hiw-bg.jpg");
+  background-image: url("../../assets/images/hiw-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
