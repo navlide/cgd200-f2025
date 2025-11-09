@@ -1,0 +1,187 @@
+<!--
+*********************************
+ Subject: CGD 200 (Fall 2025)
+ Author: Edilvan E. Falcon
+ Instructor: David Kazaryan
+ Date Created: 2025.11.04
+ Description: Assignment No. 1 
+ Simple Web Page
+ ********************************
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CGD 200 | Assignment 1 - My First Webpage</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+          Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        color: #222;
+      }
+      .wrap {
+        max-width: 840px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+      .card {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        border: 1px solid #eee;
+        border-radius: 14px;
+        box-shadow: 0 3px 18px rgba(0, 0, 0, 0.06);
+      }
+      .card img {
+        width: 160px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+
+      header {
+        padding: 48px 0 8px;
+      }
+      header h1 {
+        margin: 0 0 10px;
+        font-size: 2rem;
+      }
+      header p {
+        margin: 0;
+        color: #555;
+      }
+
+      .pill {
+        display: inline-block;
+        padding: 2px 10px;
+        border-radius: 999px;
+        background: #f2f2f2;
+        font-size: 0.9rem;
+      }
+      .section {
+        margin-top: 36px;
+      }
+
+      .food-title {
+        font-weight: bold;
+        font-style: italic;
+        color: chocolate;
+      }
+
+      .starbucks {
+        color: rgb(1, 98, 43);
+      }
+
+      .footer {
+        margin-top: 48px;
+        font-size: 0.95rem;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>Hi, Everyone! <i>This is my first Assignment for CGD 200</i></h1>
+        <p>
+          A simple page demonstrates commonly used HTML elements like
+          <code>html</code>, <code>body</code>, <code>title</code>,
+          <code>p</code>, <code>h1</code>, <code>h2</code>, <code>h3</code>,
+          <code>img</code>, <code>div</code>, <code>span</code>, <code>b</code>,
+          <code>em</code>, <code>strong</code>, and <code>i</code>.
+        </p>
+      </header>
+
+      <div class="card section" role="region" aria-label="Profile">
+        <img src="assets/images/image-02.jpg" alt="" />
+        <div>
+          <h2>About Me:</h2>
+          <p>
+            You can call me <strong>Van!</strong> I'm currently enrolled in
+            <u>Computer Graphic Design, Associate of Applied Science (AAS)</u>
+            program in <em><strong>Los Angeles Pacific College</strong></em
+            >.
+          </p>
+          <p>
+            My favorite things to do include
+            <em>
+              eating delicious food like ramen, kbbq, sinigang, kare kare and
+              bulalo , taking photos around, and playing badminton 24/7.</em
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="section" role="region" aria-label="What I can help with">
+        <h2>Hello World!</h2>
+        <div>
+          <h3>
+            Hey there, I'm Van, excited to share a bit about myself and some
+            places that have left a lasting impression on my journeys.
+          </h3>
+          <p>
+            If you're seeking a familiar yet comforting experience,
+            <strong><span class="starbucks">Starbucks</span></strong>
+            coffee shops are a reliable go-to for a perfect cup of joe and a
+            cozy ambiance.
+          </p>
+        </div>
+        <div>
+          <h3>My Travels</h3>
+          <img src="assets/images/denmark.jpg" alt="" />
+          <p>
+            In my travels, <strong><u>Denmark's</u></strong> charm stole my
+            heart with its picturesque landscapes and the historic beauty of
+            places like Nyhavn in Copenhagen.
+            <strong><u>Vietnam's</u></strong> vibrant culture and bustling
+            cities like Hanoi offer an exhilarating blend of tradition and
+            modernity.
+          </p>
+          <img src="assets/images/vietnam.jpg" alt="" />
+        </div>
+        <div>
+          <h3>Food Favorites</h3>
+          <p>
+            <img src="assets/images/fogo.jpg" alt="" style="width: 50%" />
+            <img src="assets/images/steak.jpg" alt="" style="width: 49%" />
+            <br />
+            Now, when it comes to dining,
+            <span class="food-title">Fogo de Chao's</span> Brazilian churrasco
+            experience is an absolute must for carnivores—it's an adventure for
+            the taste buds! And if you're in the mood for a culinary
+            masterpiece,
+            <span class="food-title">Alexander's Steakhouse</span> presents an
+            exquisite fusion of flavors that'll linger in your memory long after
+            the last bite. From sipping coffee at a familiar spot to delving
+            into diverse cultures and cuisines, the world is brimming with
+            incredible places waiting to be explored!
+          </p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>
+          <span>&copy; </span> EEF <span id="year"></span> | Computer Graphic
+          Design, Associate of Applied Science (AAS) - Los Angeles Pacific
+          College
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // generate year in span element
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
