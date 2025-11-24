@@ -1,0 +1,347 @@
+<!--
+*********************************
+ Subject: CGD 200 (Fall 2025)
+ Author: Edilvan E. Falcon
+ Instructor: David Kazaryan
+ Date Created: 2025.11.17
+ Description: Assignment No. 2 
+ 
+ Make up a product and create a page for it. You can use AI to generate the images of the product and come up with text content.
+ Make sure the website is responsive (works well on desktop and mobile)
+ Include a dropdown navigation
+ Use either CSS flexbox or Grid or both
+ Use google fonts
+*********************************
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thumbler - The Smart Temperature Tumbler</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <!-- Header / Navigation -->
+    <header>
+      <div class="container nav">
+        <a href="#top" class="nav-logo">
+          <div class="nav-logo-icon">T</div>
+          <span>Thumbler</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+        </button>
+
+        <div class="nav-actions">
+          <div class="nav-links-wrapper">
+            <ul class="nav-links">
+              <li class="nav-item">
+                <a href="#features" class="nav-link">Features</a>
+              </li>
+              <li class="nav-item">
+                <a href="#specs" class="nav-link">Specs</a>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link nav-dropdown-toggle">
+                  Editions
+                  <span class="nav-dropdown-icon">▾</span>
+                </div>
+                <div class="dropdown-menu">
+                  <a href="#editions" class="dropdown-link">
+                    <span>Thumbler One</span>
+                  </a>
+                  <a href="#editions" class="dropdown-link">
+                    <span>Thumbler+ Glow</span>
+                  </a>
+                  <a href="#editions" class="dropdown-link">
+                    <span>Thumbler Pro</span>
+                  </a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#cta" class="nav-link">Buy</a>
+              </li>
+            </ul>
+            <button
+              class="btn btn-outline"
+              onclick="document.getElementById('cta').scrollIntoView({behavior: 'smooth'})"
+            >
+              Preorder now
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal-on-scroll">
+            <div class="hero-pill">
+              <div class="hero-pill-dot"></div>
+              <span>New • Smart Hydration For 2025</span>
+            </div>
+            <h1 class="hero-title">
+              Meet <span class="hero-gradient">Thumbler</span>, the tumbler that
+              thinks for you.
+            </h1>
+            <p class="hero-subtitle">
+              Thumbler is a smart temperature-aware tumbler that learns your
+              drinking habits, keeps your drink perfectly hot or cold, and
+              nudges you to stay hydrated—without ever feeling naggy.
+            </p>
+            <div class="hero-actions">
+              <button
+                class="btn btn-primary"
+                onclick="document.getElementById('cta').scrollIntoView({behavior: 'smooth'})"
+              >
+                Get early access
+              </button>
+              <button
+                class="btn btn-outline"
+                onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})"
+              >
+                Explore features
+              </button>
+            </div>
+            <div class="hero-meta">
+              <div class="hero-meta-item">
+                <span class="hero-meta-dot"></span>
+                <span>Ships April 2026</span>
+              </div>
+              <div class="hero-meta-item">
+                <span>24h cold • 6h hot • 0 setup</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="hero-visual reveal-on-scroll reveal-delay-1"
+            aria-hidden="true"
+          >
+            <div class="hero-card">
+              <div class="hero-orbit"></div>
+              <!--<div class="tumbler-illustration">
+                <div class="tumbler-inner">
+                  <div class="tumbler-display">
+                    <div class="tumbler-temp">62°</div>
+                    <div>SIP NOW</div>
+                  </div>
+                  <div class="tumbler-glow"></div>
+                </div>
+                <div class="tumbler-base"></div>
+              </div> -->
+
+              <img src="assets/images/product-main 2.jpeg" />
+
+              <div class="hero-stats">
+                <div class="hero-stat">
+                  <span class="hero-stat-label">Battery</span>
+                  <span class="hero-stat-value">7 days on a charge</span>
+                </div>
+                <div class="hero-stat">
+                  <span class="hero-stat-label">Smart alerts</span>
+                  <span class="hero-stat-value">Adaptive to your day</span>
+                </div>
+                <div class="hero-stat">
+                  <span class="hero-stat-label">Material</span>
+                  <span class="hero-stat-value">18/8 stainless, BPA-free</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="reveal-on-scroll">
+        <div class="container">
+          <div class="section-heading">
+            <div class="section-kicker">Why Thumbler</div>
+            <h2 class="section-title">More than just a tumbler</h2>
+            <p class="section-subtitle">
+              Thumbler quietly tracks your sips, adapts to your routine, and
+              keeps every drink at the sweet spot—all while looking like a
+              minimal everyday tumbler.
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <article class="feature-card reveal-on-scroll reveal-delay-1">
+              <div class="feature-icon">🔥</div>
+              <h3 class="feature-title">SmartTemp Core</h3>
+              <p class="feature-text">
+                Dual-sensor core monitors both liquid and ambient temperature,
+                keeping your drink between 58–62°C or as cool as 3°C with
+                precision insulation.
+              </p>
+            </article>
+            <article class="feature-card reveal-on-scroll reveal-delay-2">
+              <div class="feature-icon">📱</div>
+              <h3 class="feature-title">Thumbprint Sync</h3>
+              <p class="feature-text">
+                Just tap the touch ring once to pair. Thumbler syncs with your
+                phone to log hydration, but works perfectly offline when you
+                don’t want another app.
+              </p>
+            </article>
+            <article class="feature-card reveal-on-scroll reveal-delay-3">
+              <div class="feature-icon">🔔</div>
+              <h3 class="feature-title">Gentle Glow Alerts</h3>
+              <p class="feature-text">
+                A soft, customizable glow reminds you to sip—no loud buzzes or
+                notifications. Thumbler learns when you’re actually free to
+                drink.
+              </p>
+            </article>
+            <article class="feature-card reveal-on-scroll reveal-delay-1">
+              <div class="feature-icon">🌙</div>
+              <h3 class="feature-title">Sleep-aware Mode</h3>
+              <p class="feature-text">
+                Auto-dims and mutes alerts at night based on your typical sleep
+                time, so your bedside water never flashes in your face at 3 a.m.
+              </p>
+            </article>
+            <article class="feature-card reveal-on-scroll reveal-delay-2">
+              <div class="feature-icon">♻️</div>
+              <h3 class="feature-title">Sustainably Built</h3>
+              <p class="feature-text">
+                18/8 stainless steel, powder-coat finish, and a fully
+                replaceable smart base so your tumbler lasts for years—not just
+                its first battery.
+              </p>
+            </article>
+            <article class="feature-card reveal-on-scroll reveal-delay-3">
+              <div class="feature-icon">💧</div>
+              <h3 class="feature-title">Leak-proof & Life-proof</h3>
+              <p class="feature-text">
+                Twist-lock lid, one-hand open, and IPX6-rated smart base. Toss
+                Thumbler into your bag without fear of soaked laptops or books.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Specs / Editions -->
+      <section id="specs" class="reveal-on-scroll">
+        <div class="container">
+          <div class="section-heading">
+            <div class="section-kicker">Details</div>
+            <h2 class="section-title">Specs that actually matter</h2>
+            <p class="section-subtitle">
+              Engineered around real-world use: commute, desk, gym, flights and
+              everything in between.
+            </p>
+          </div>
+
+          <div class="specs-wrapper">
+            <div class="specs-highlight">
+              <h3>Thumbler One</h3>
+              <p>
+                Our everyday Thumbler that balances battery life, capacity, and
+                comfort. Perfect for workdays and weekend adventures.
+              </p>
+              <ul
+                style="
+                  list-style: none;
+                  padding-left: 0;
+                  font-size: 0.87rem;
+                  color: var(--muted);
+                "
+              >
+                <li>• 18 oz / 530 ml capacity</li>
+                <li>• Up to 24h cold, 6h hot</li>
+                <li>• USB-C fast charging (60 min full)</li>
+                <li>• Available in Cloud, Mist, and Midnight</li>
+              </ul>
+            </div>
+
+            <div class="specs-row" id="editions">
+              <div class="spec-item">
+                <span class="spec-label">Capacity</span>
+                <span class="spec-value">18 oz / 530 ml</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Weight</span>
+                <span class="spec-value">390 g (empty)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Material</span>
+                <span class="spec-value">18/8 stainless + Tritan lid</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Battery life</span>
+                <span class="spec-value">Up to 7 days typical</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Charging</span>
+                <span class="spec-value">USB-C, 1 hour full charge</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Water resistance</span>
+                <span class="spec-value">IPX6 smart base</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Companion app</span>
+                <span class="spec-value">iOS & Android (optional)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Colors</span>
+                <span class="spec-value">Cloud, Mist, Midnight, Glow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section id="cta" class="cta reveal-on-scroll">
+        <div class="container">
+          <div class="cta-card">
+            <div class="cta-text">
+              <h3>Reserve your Thumbler today</h3>
+              <p>
+                Early access pricing starts at <strong>$119</strong>. No payment
+                required to join the waitlist—we’ll email you before we ship.
+              </p>
+            </div>
+            <div class="cta-actions">
+              <button class="btn btn-primary">Join waitlist</button>
+              <button class="btn btn-outline">Get launch updates</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-inner">
+        <span
+          >© EEF 2025 | Computer Graphic Design, Associate of Applied Science
+          (AAS) - Los Angeles Pacific College</span
+        >
+        <div class="footer-links">
+          <span class="footer-link">Privacy</span>
+          <span class="footer-link">Terms</span>
+          <span class="footer-link">Support</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/application.js"></script>
+  </body>
+</html>
