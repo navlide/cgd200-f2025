@@ -1,0 +1,259 @@
+<!--
+*********************************
+ Subject: CGD 200 (Fall 2025)
+ Author: Edilvan E. Falcon
+ Instructor: David Kazaryan
+ Date Created: 2025.11.19
+ Description: Assignment No. 4
+ 
+ Create an page to engage users and then direct them to your product or service page.
+*********************************
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CGD 200 | Assignment 4 - Engagement page for user</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- QUIZ SECTION -->
+      <section class="quiz-wrapper">
+        <header class="quiz-header">
+          <div class="quiz-tag">
+            <span class="quiz-tag-dot"></span>
+            1-Minute Thumbler Mini Quiz
+          </div>
+          <h1>How well do you know Thumbler?</h1>
+          <p>
+            Answer 5 quick questions about Thumbler, then see your score and
+            jump to the product page.
+          </p>
+        </header>
+
+        <form id="quizForm">
+          <!-- Q1 -->
+          <div class="question" data-question="q1">
+            <div class="question-title">
+              1. What is Thumbler mainly designed for?
+            </div>
+            <div class="options">
+              <label>
+                <input type="radio" name="q1" value="a" />
+                A smart, temperature-controlled drink tumbler
+              </label>
+              <label>
+                <input type="radio" name="q1" value="b" />
+                A mobile game
+              </label>
+              <label>
+                <input type="radio" name="q1" value="c" />
+                A keyboard accessory
+              </label>
+              <label>
+                <input type="radio" name="q1" value="d" />
+                A music streaming app
+              </label>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="question" data-question="q2">
+            <div class="question-title">
+              2. Which feature makes Thumbler perfect for people on the go?
+            </div>
+            <div class="options">
+              <label>
+                <input type="radio" name="q2" value="a" />
+                Built-in speakers
+              </label>
+              <label>
+                <input type="radio" name="q2" value="b" />
+                Temperature tracking and long-lasting insulation
+              </label>
+              <label>
+                <input type="radio" name="q2" value="c" />
+                Gaming joystick
+              </label>
+              <label>
+                <input type="radio" name="q2" value="d" />
+                Projector for movies
+              </label>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="question" data-question="q3">
+            <div class="question-title">
+              3. How can users typically check Thumbler’s temperature status?
+            </div>
+            <div class="options">
+              <label>
+                <input type="radio" name="q3" value="a" />
+                By shaking it and listening
+              </label>
+              <label>
+                <input type="radio" name="q3" value="b" />
+                Through a small display or app indicator
+              </label>
+              <label>
+                <input type="radio" name="q3" value="c" />
+                By plugging it into a computer
+              </label>
+              <label>
+                <input type="radio" name="q3" value="d" />
+                By scanning a QR code every hour
+              </label>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="question" data-question="q4">
+            <div class="question-title">
+              4. What is one eco-friendly benefit of using Thumbler?
+            </div>
+            <div class="options">
+              <label>
+                <input type="radio" name="q4" value="a" />
+                It replaces disposable cups and bottles
+              </label>
+              <label>
+                <input type="radio" name="q4" value="b" />
+                It prints receipts
+              </label>
+              <label>
+                <input type="radio" name="q4" value="c" />
+                It consumes a lot of power
+              </label>
+              <label>
+                <input type="radio" name="q4" value="d" />
+                It’s only used once
+              </label>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="question" data-question="q5">
+            <div class="question-title">
+              5. Who is the ideal user for Thumbler?
+            </div>
+            <div class="options">
+              <label>
+                <input type="radio" name="q5" value="a" />
+                People who never leave their desk
+              </label>
+              <label>
+                <input type="radio" name="q5" value="b" />
+                People who want a stylish, smart way to keep drinks at the right
+                temperature
+              </label>
+              <label>
+                <input type="radio" name="q5" value="c" />
+                Only professional athletes
+              </label>
+              <label>
+                <input type="radio" name="q5" value="d" />
+                Only children under 5
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit" id="submitBtn">
+            Submit Quiz &amp; See Result
+          </button>
+
+          <div class="result-inline" id="inlineResult"></div>
+        </form>
+      </section>
+
+      <!-- HERO RESULT SECTION (same page) -->
+      <section class="hero" id="resultHero">
+        <!-- TEXT SIDE -->
+        <div class="hero-text">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            Thumbler Quiz Result
+          </div>
+
+          <h2 class="hero-title">Nice! Here’s how you did 🎉</h2>
+
+          <p class="score-line">
+            You scored <span id="scoreValue" class="score-value">0/0</span>
+          </p>
+          <p id="scoreMessage" class="score-message">
+            Answer the quiz above to see your personalized result.
+          </p>
+
+          <p>
+            Thumbler keeps your drink at the perfect temperature for hours, with
+            smart feedback and a premium, minimalist design. Check out the full
+            product page to see colors, capacity, and all the smart features.
+          </p>
+
+          <div class="cta-group">
+            <!-- Product page link (change this href to your real product page) -->
+            <a href="thumbler-product.html" class="btn-primary">
+              Go to Thumbler Product Page
+            </a>
+
+            <!-- Optional retry -->
+            <a
+              href="#top"
+              class="btn-ghost"
+              onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+            >
+              Take the Quiz Again
+            </a>
+          </div>
+
+          <p class="note">
+            Tip: Your score is just for fun — but your hydration can be
+            seriously upgraded. 💧
+          </p>
+        </div>
+
+        <!-- IMAGE SIDE -->
+        <div
+          class="hero-image-wrapper"
+          aria-label="Thumbler smart drink tumbler"
+        >
+          <div class="hero-pill"></div>
+          <article class="hero-card">
+            <header class="hero-card-header">
+              <div>
+                <div style="font-size: 0.8rem; opacity: 0.8">Thumbler</div>
+                <div style="font-size: 0.9rem; font-weight: 600">
+                  Smart Temperature Tumbler
+                </div>
+              </div>
+              <div class="hero-card-badge">New</div>
+            </header>
+            <div class="hero-card-body">
+              <!-- Replace this image with your own product image or local file -->
+              <img
+                src="assets/images/product-main.jpg"
+                alt="my own smart insulated drink tumbler"
+              />
+            </div>
+            <footer class="hero-card-footer">
+              <span>Thermal Lock™ Insulation</span>
+              <span class="hero-card-temp">Keeps at 62°C / 144°F</span>
+            </footer>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <script src="assets/application.js"></script>
+  </body>
+</html>
